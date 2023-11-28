@@ -16,56 +16,22 @@
 <li><a href="../modules/wisp_api_apis_backups.html">wisp_api/apis/backups</a></li>
 <li><a href="wisp_api_apis_backups.Backup.html">Backup</a></li></ul>
 <h1>Type alias Backup<code class="tsd-tag ts-flagInternal">Internal</code> </h1></div>
-<div class="tsd-signature"><span class="tsd-kind-type-alias">Backup</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">attributes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>        </span><span class="tsd-kind-property">bytes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">created_at</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">creating</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">locked</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">sha256_hash</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">uuid_short</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
+<div class="tsd-signature"><span class="tsd-kind-type-alias">Backup</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">attributes</span><span class="tsd-signature-symbol">: </span><a href="wisp_api_apis_backups.BackupAttributes.html" class="tsd-signature-type tsd-kind-type-alias">BackupAttributes</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">object</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;backup&quot;</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
 <div class="tsd-comment tsd-typography"><p>A Backup Object</p>
 </div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter">
-<h5><code class="tsd-tag ts-flagInternal">Internal</code> <span class="tsd-kind-property">attributes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">bytes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">created_at</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">creating</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">locked</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">sha256_hash</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">uuid_short</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h5>
-<div class="tsd-comment tsd-typography"><p>The Backup attributes</p>
-</div>
-<div class="tsd-comment tsd-typography">
-<h4>Param</h4><p>The UUID</p>
-
-<h4>Param</h4><p>The short-form UUID</p>
-
-<h4>Param</h4><p>The name</p>
-
-<h4>Param</h4><p>The hash of the backup. May not be present if it&#39;s still being created</p>
-
-<h4>Param</h4><p>The size of the Backup, in bytes</p>
-
-<h4>Param</h4><p>Whether or not the Backup is locked</p>
-
-<h4>Param</h4><p>Whether or not the Backup is still being created</p>
-
-<h4>Param</h4><p>A Timestamp indicating when the backup was created</p>
-</div>
-<ul class="tsd-parameters">
+<h5><span class="tsd-kind-property">attributes</span><span class="tsd-signature-symbol">: </span><a href="wisp_api_apis_backups.BackupAttributes.html" class="tsd-signature-type tsd-kind-type-alias">BackupAttributes</a></h5></li>
 <li class="tsd-parameter">
-<h5><span class="tsd-kind-property">bytes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5></li>
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">created_<wbr/>at</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li>
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">creating</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5></li>
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">locked</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5></li>
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li>
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">sha256_<wbr/>hash</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5></li>
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li>
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">uuid_<wbr/>short</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li></ul></li></ul></div>
+<h5><span class="tsd-kind-property">object</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;backup&quot;</span></h5></li></ul></div>
 <div class="tsd-comment tsd-typography">
 <h4>Example</h4><pre><code class="language-json"><span class="hl-0">{</span><br/><span class="hl-0">    </span><span class="hl-1">&quot;object&quot;</span><span class="hl-0">: </span><span class="hl-2">&quot;backup&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-1">&quot;attributes&quot;</span><span class="hl-0">: {</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;uuid&quot;</span><span class="hl-0">: </span><span class="hl-2">&quot;26adeafc-74af-43fd-93a5-9afa0486b21b&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;uuid_short&quot;</span><span class="hl-0">: </span><span class="hl-2">&quot;26adeafc&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;name&quot;</span><span class="hl-0">: </span><span class="hl-2">&quot;test-1&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;sha256_hash&quot;</span><span class="hl-0">: </span><span class="hl-2">&quot;56d2965e9167c785647878a391dfe24460c3aa5e1111b385708094bd8837b487&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;bytes&quot;</span><span class="hl-0">: </span><span class="hl-3">3266448936</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;locked&quot;</span><span class="hl-0">: </span><span class="hl-4">false</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;creating&quot;</span><span class="hl-0">: </span><span class="hl-4">false</span><span class="hl-0">,</span><br/><span class="hl-0">        </span><span class="hl-1">&quot;created_at&quot;</span><span class="hl-0">: </span><span class="hl-2">&quot;2023-11-28T08:37:39.000000Z&quot;</span><br/><span class="hl-0">    }</span><br/><span class="hl-0">}</span>
 </code><button>Copy</button></pre>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L26">wisp_api/apis/backups.ts:26</a></li></ul></aside></div>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/704c60e/wisp_api/apis/backups.ts#L52">wisp_api/apis/backups.ts:52</a></li></ul></aside></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

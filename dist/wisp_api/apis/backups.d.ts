@@ -1,6 +1,31 @@
 import { WispAPICore } from "./index";
 import type { PaginationData } from "./index";
 /**
+ * The Backup attributes
+ *
+ *
+ * @param uuid The UUID
+ * @param uuid_short The short-form UUID
+ * @param name The name
+ * @param sha256_hash The hash of the backup. May not be present if it's still being created
+ * @param bytes The size of the Backup, in bytes
+ * @param locked Whether or not the Backup is locked
+ * @param creating Whether or not the Backup is still being created
+ * @param created_at A Timestamp indicating when the backup was created
+ *
+ * @internal
+ */
+export type BackupAttributes = {
+    uuid: string;
+    uuid_short: string;
+    name: string;
+    sha256_hash: string | null;
+    bytes: number;
+    locked: boolean;
+    creating: boolean;
+    created_at: string;
+};
+/**
  * A Backup Object
  * @example
  * ```json
@@ -22,31 +47,8 @@ import type { PaginationData } from "./index";
  * @internal
  */
 export type Backup = {
-    /**
-     * The Backup attributes
-     *
-     *
-     * @param uuid The UUID
-     * @param uuid_short The short-form UUID
-     * @param name The name
-     * @param sha256_hash The hash of the backup. May not be present if it's still being created
-     * @param bytes The size of the Backup, in bytes
-     * @param locked Whether or not the Backup is locked
-     * @param creating Whether or not the Backup is still being created
-     * @param created_at A Timestamp indicating when the backup was created
-     *
-     * @internal
-     */
-    attributes: {
-        uuid: string;
-        uuid_short: string;
-        name: string;
-        sha256_hash: string | null;
-        bytes: number;
-        locked: boolean;
-        creating: boolean;
-        created_at: string;
-    };
+    object: "backup";
+    attributes: BackupAttributes;
 };
 /**
  * Response object used in the GetBackups call

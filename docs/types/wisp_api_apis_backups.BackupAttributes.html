@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>AuditLog | wispjs</title><meta name="description" content="Documentation for wispjs"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>BackupAttributes | wispjs</title><meta name="description" content="Documentation for wispjs"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,33 +13,50 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">wispjs</a></li>
-<li><a href="../modules/wisp_api_apis_audit_log.html">wisp_api/apis/audit_log</a></li>
-<li><a href="wisp_api_apis_audit_log.AuditLog.html">AuditLog</a></li></ul>
-<h1>Type alias AuditLog<code class="tsd-tag ts-flagInternal">Internal</code> </h1></div>
-<div class="tsd-signature"><span class="tsd-kind-type-alias">Audit<wbr/>Log</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">attributes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>        </span><span class="tsd-kind-property">action</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">created_at</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">device</span><span class="tsd-signature-symbol">: </span><a href="wisp_api_apis_audit_log.Device.html" class="tsd-signature-type tsd-kind-type-alias">Device</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">metadata</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>        </span><span class="tsd-kind-property">subaction</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">object</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;audit_log&quot;</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
-<div class="tsd-comment tsd-typography"><p>An Audit Log struct</p>
+<li><a href="../modules/wisp_api_apis_backups.html">wisp_api/apis/backups</a></li>
+<li><a href="wisp_api_apis_backups.BackupAttributes.html">BackupAttributes</a></li></ul>
+<h1>Type alias BackupAttributes<code class="tsd-tag ts-flagInternal">Internal</code> </h1></div>
+<div class="tsd-signature"><span class="tsd-kind-type-alias">Backup<wbr/>Attributes</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">bytes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">created_at</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">creating</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">locked</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">sha256_hash</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">uuid_short</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
+<div class="tsd-comment tsd-typography"><p>The Backup attributes</p>
 </div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter">
-<h5><span class="tsd-kind-property">attributes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">action</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">created_at</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">device</span><span class="tsd-signature-symbol">: </span><a href="wisp_api_apis_audit_log.Device.html" class="tsd-signature-type tsd-kind-type-alias">Device</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">metadata</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">subaction</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h5>
-<ul class="tsd-parameters">
-<li class="tsd-parameter">
-<h5><span class="tsd-kind-property">action</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-property">bytes</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5></li>
 <li class="tsd-parameter">
 <h5><span class="tsd-kind-property">created_<wbr/>at</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li>
 <li class="tsd-parameter">
-<h5><span class="tsd-kind-property">device</span><span class="tsd-signature-symbol">: </span><a href="wisp_api_apis_audit_log.Device.html" class="tsd-signature-type tsd-kind-type-alias">Device</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5></li>
+<h5><span class="tsd-kind-property">creating</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5></li>
 <li class="tsd-parameter">
-<h5><span class="tsd-kind-property">metadata</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5></li>
+<h5><span class="tsd-kind-property">locked</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5></li>
 <li class="tsd-parameter">
-<h5><span class="tsd-kind-property">subaction</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li></ul></li>
+<h5><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li>
 <li class="tsd-parameter">
-<h5><span class="tsd-kind-property">object</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;audit_log&quot;</span></h5></li></ul></div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<h5><span class="tsd-kind-property">sha256_<wbr/>hash</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">uuid_<wbr/>short</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li></ul></div>
+<div class="tsd-comment tsd-typography">
+<h4>Param</h4><p>The UUID</p>
+
+<h4>Param</h4><p>The short-form UUID</p>
+
+<h4>Param</h4><p>The name</p>
+
+<h4>Param</h4><p>The hash of the backup. May not be present if it&#39;s still being created</p>
+
+<h4>Param</h4><p>The size of the Backup, in bytes</p>
+
+<h4>Param</h4><p>Whether or not the Backup is locked</p>
+
+<h4>Param</h4><p>Whether or not the Backup is still being created</p>
+
+<h4>Param</h4><p>A Timestamp indicating when the backup was created</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/704c60e/wisp_api/apis/audit_log.ts#L37">wisp_api/apis/audit_log.ts:37</a></li></ul></aside></div>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/704c60e/wisp_api/apis/backups.ts#L20">wisp_api/apis/backups.ts:20</a></li></ul></aside></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

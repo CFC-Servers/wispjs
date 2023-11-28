@@ -5,36 +5,31 @@ import type { PaginationData } from "./index";
  *
  * @internal
  */
-export type Allocation = {
+export interface Allocation {
     object: "allocation";
-    /**
-     * An Allocation's attributes
-     *
-     * @param id The ID of the Allocation
-     * @param primary Whether or not this Allocation is the Server's primary Allocation
-     * @param ip The IP of the Allocation
-     * @param port the port of the Allocation
-     */
     attributes: {
         id: number;
+        /** Whether or not this Allocation is the primary one for the Server */
         primary: boolean;
         ip: string;
         port: number;
     };
-};
+}
 /**
  * The response object from the GetAllocations call
  *
  * @remarks
  * Used in {@link AllocationsAPI.List}
+ *
+ * @public
  */
-export type GetAllocationsResponse = {
+export interface GetAllocationsResponse {
     object: "list";
     data: Allocation[];
     meta: {
         pagination: PaginationData;
     };
-};
+}
 /**
  * Handles the listing and updating of a Server's IP/Port Allocations
  *

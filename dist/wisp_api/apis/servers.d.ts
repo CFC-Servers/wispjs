@@ -1,6 +1,6 @@
 import { WispAPICore } from "./index";
 export type PowerRequest = "start" | "stop" | "restart" | "kill";
-export type GetDetailsResponse = {
+export interface GetDetailsResponse {
     object: "server";
     attributes: {
         id: number;
@@ -23,13 +23,13 @@ export type GetDetailsResponse = {
             backup_megabytes: number;
         };
     };
-};
-export type GetWebsocketDetailsResponse = {
+}
+export interface GetWebsocketDetailsResponse {
     url: string;
     upload_url: string;
     token: string;
-};
-export type GetResourcesResponse = {
+}
+export interface GetResourcesResponse {
     status: number;
     proc: {
         memory: {
@@ -58,7 +58,7 @@ export type GetResourcesResponse = {
             };
         };
     };
-};
+}
 /**
  * Handles generic Server interaction, such as Sending Commands, managing Power State, and getting Details
  *

@@ -1,12 +1,17 @@
 import { WispAPICore } from "./index";
 import type { PaginationData } from "./index";
-export type CronSchedule = {
+/**
+ * A Cron-formatted scheduling object
+ *
+ * @internal
+ */
+export interface CronSchedule {
     minute: string;
     hour: string;
     day_of_week: string;
     day_of_month: string;
-};
-export type Schedule = {
+}
+export interface Schedule {
     object: "schedule";
     attributes: {
         id: number;
@@ -19,23 +24,31 @@ export type Schedule = {
         created_at: string;
         updated_at: string;
     };
-};
-export type GetSchedulesResponse = {
+}
+/**
+ * A response object for the GetSchedule call
+ *
+ * @remarks
+ * Used in {@link SchedulesAPI.List}
+ *
+ * @public
+ */
+export interface GetSchedulesResponse {
     object: "list";
     data: Schedule[];
     meta: {
         pagination: PaginationData;
     };
-};
-export type CreateScheduleRequest = {
+}
+export interface CreateScheduleRequest {
     name: string;
     cron_minute: string;
     cron_hour: string;
     cron_day_of_week: string;
     cron_day_of_month: string;
     is_active: boolean;
-};
-export type ScheduleTask = {
+}
+export interface ScheduleTask {
     object: "schedule_task";
     attributes: {
         id: number;
@@ -47,13 +60,13 @@ export type ScheduleTask = {
         created_at: string;
         updated_at: string;
     };
-};
+}
 export type ScheduleTaskAction = "command" | "power" | "backup";
-export type CreateScheduleTaskRequest = {
+export interface CreateScheduleTaskRequest {
     action: ScheduleTaskAction;
     time_offset: number;
     payload: string | null;
-};
+}
 /**
  * Handles interactions with Server Schedules
  *

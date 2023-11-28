@@ -16,7 +16,7 @@ export type ModPermissionType = "server:mod.read" | "server:mod.update";
 export type MonitorPermissionType = "server:monitor.read" | "server:monitor.update";
 export type ReinstallPermissionType = "server:reinstall.update";
 export type Permission = SupportPermissionType | ControlPermissionType | SubuserPermissionType | AllocationPermissionType | StartupPermissionType | DatabasePermissionType | FilePermissionType | SchedulePermissionType | BackupPermissionType | DetailsPermissionType | AuditPermissionType | FastDLPermissionType | ModPermissionType | MonitorPermissionType | ReinstallPermissionType;
-export type User = {
+export interface User {
     object: "user";
     attributes: {
         email: string;
@@ -24,8 +24,8 @@ export type User = {
         naem_last: string;
         has_2fa: boolean;
     };
-};
-export type Subuser = {
+}
+export interface Subuser {
     object: "server_subuser";
     attributes: {
         id: number;
@@ -36,18 +36,18 @@ export type Subuser = {
             user: User;
         };
     };
-};
-export type GetSubusersResponse = {
+}
+export interface GetSubusersResponse {
     object: "list";
     data: Subuser[];
     meta: {
         pagination: PaginationData;
     };
-};
-export type GetAllSubuserPermissionsResponse = {
+}
+export interface GetAllSubuserPermissionsResponse {
     permissions: Permission[];
     assignable: Permission[];
-};
+}
 /**
  * Handles interfacing with the Subusers API
  *

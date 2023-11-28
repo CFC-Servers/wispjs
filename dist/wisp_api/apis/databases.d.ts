@@ -1,6 +1,6 @@
 import { WispAPICore } from "./index";
 import type { PaginationData } from "./index";
-export type DatabaseRelationship = {
+export interface DatabaseRelationship {
     object: "database_host";
     attributes: {
         id: number;
@@ -9,8 +9,8 @@ export type DatabaseRelationship = {
         port: number;
         phpmyadmin_url: string | null;
     };
-};
-export type Database = {
+}
+export interface Database {
     object: "database";
     attributes: {
         id: number;
@@ -20,14 +20,14 @@ export type Database = {
         password: string;
         relationships: DatabaseRelationship[];
     };
-};
-export type GetDatabasesResponse = {
+}
+export interface GetDatabasesResponse {
     object: "list";
     data: Database[];
     meta: {
         pagination: PaginationData;
     };
-};
+}
 /**
  * Handles Creating, Listing, Updating, and Deleting of Databases for the Server
  *

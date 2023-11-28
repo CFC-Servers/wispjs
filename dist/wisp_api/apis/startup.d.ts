@@ -1,10 +1,10 @@
 import { WispAPICore } from "./index";
-export type UpdateStartup = {
+export interface UpdateStartup {
     environment: {
         [key: string]: any;
     };
-};
-export type StartupDetail = {
+}
+export interface StartupDetail {
     object: "server_variable";
     attributes: {
         name: string;
@@ -16,14 +16,14 @@ export type StartupDetail = {
         rules: string;
         server_value: string;
     };
-};
-export type StartupDetails = {
+}
+export interface StartupDetails {
     object: "list";
     data: StartupDetail[];
     meta: {
         startup_command: string;
     };
-};
+}
 /**
  * Handles interaction with Server Startup information
  *

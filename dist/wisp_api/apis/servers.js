@@ -4,35 +4,30 @@ export class ServersAPI {
     }
     // [POST] /api/client/servers/<UUID>/command
     async SendCommand(command) {
-        try {
-            const response = await this.core.makeRequest("POST", "command", { command: command });
-            return response.ok;
-        }
-        catch (error) {
-            this.core.logger.error(`Failed to send command: ${error}`);
-            return false;
-        }
+        await this.core.makeRequest("POST", "command", { command: command });
     }
     // [GET] api/client/servers/<UUID>/details
     async GetWebsocketDetails() {
         const response = await this.core.makeRequest("GET", "websocket");
-        console.log("Got websocket details response", response);
         return await response.json();
     }
     // [PATCH] /api/client/servers/<UUID>/details
     async SetName(name) {
-        return await this.core.makeRequest("PATCH", "details", { name: name });
+        const response = await this.core.makeRequest("PATCH", "details", { name: name });
+        return await response.json();
     }
     // [GET] /api/client/servers/<UUID>
     async GetDetails() {
-        return await this.core.makeRequest("GET", "");
+        const response = await this.core.makeRequest("GET", "");
+        return await response.json();
     }
     // [GET] /api/client/servers/<UUID>/resources
     async GetResources() {
-        return await this.core.makeRequest("GET", "resources");
+        const response = await this.core.makeRequest("GET", "resources");
+        return await response.json();
     }
     // [POST] /api/client/servers/<UUID>/power
     async PowerRequest(action) {
-        return await this.core.makeRequest("POST", "power", { signal: action });
+        await this.core.makeRequest("POST", "power", { signal: action });
     }
 }

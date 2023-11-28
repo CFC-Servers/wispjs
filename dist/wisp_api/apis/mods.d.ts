@@ -15,9 +15,26 @@ export type GetModsResponse = {
     object: "list";
     data: Mod[];
 };
+/**
+ * Handles Listing and Installating of Mods
+ *
+ * @public
+ */
 export declare class ModsAPI {
     private core;
     constructor(core: WispAPICore);
-    List(search?: string | null): Promise<GetModsResponse>;
-    Install(id: string): Promise<Response>;
+    /**
+     * Lists all Mods available to the Server
+     *
+     * @public
+     */
+    List(): Promise<GetModsResponse>;
+    /**
+     * Installs or Uninstalls the Mod with the given id
+     *
+     * @param id The ID of the Mod to Install/Uninstall
+     *
+     * @public
+     */
+    ToggleInstall(id: string): Promise<void>;
 }

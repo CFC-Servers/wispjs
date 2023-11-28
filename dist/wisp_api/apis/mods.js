@@ -1,16 +1,30 @@
+/**
+ * Handles Listing and Installating of Mods
+ *
+ * @public
+ */
 export class ModsAPI {
     constructor(core) {
         this.core = core;
     }
-    // [GET] /api/client/servers/<UUID>/mods
-    async List(search = null) {
-        const searchStruct = search ? { search: search } : null;
-        const response = await this.core.makeRequest("GET", "mods", searchStruct);
+    /**
+     * Lists all Mods available to the Server
+     *
+     * @public
+     */
+    async List() {
+        const response = await this.core.makeRequest("GET", "mods");
         const data = await response.json();
         return data;
     }
-    // [POST] /api/client/servers/<UUID>/mods/<ID>
-    async Install(id) {
-        return await this.core.makeRequest("POST", `mods/${id}`);
+    /**
+     * Installs or Uninstalls the Mod with the given id
+     *
+     * @param id The ID of the Mod to Install/Uninstall
+     *
+     * @public
+     */
+    async ToggleInstall(id) {
+        await this.core.makeRequest("POST", `mods/${id}`);
     }
 }

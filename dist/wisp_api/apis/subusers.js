@@ -1,36 +1,70 @@
+/**
+ * Handles interfacing with the Subusers API
+ *
+ * @public
+ */
 export class SubusersAPI {
     constructor(core) {
         this.core = core;
     }
-    // [GET] /api/client/servers/<UUID>/subusers
+    /**
+     * Lists all Subusers for the Server
+     *
+     * @public
+     */
     async List() {
         const response = await this.core.makeRequest("GET", "subusers", { include: "user" });
         const data = await response.json();
         return data;
     }
-    // [GET] /api/client/servers/<UUID>/subusers/<SUB_ID>
+    /**
+     * Retrieves the details for the Subuser
+     *
+     * @param id The ID of the Subuser
+     *
+     * @public
+     */
     async GetDetails(id) {
         const response = await this.core.makeRequest("GET", `subusers/${id}`, { include: "user" });
         const data = await response.json();
         return data;
     }
-    // [GET] /api/client/servers/<UUID>/subusers/permissions
+    /**
+     * Get all permissions available to Subusers
+     *
+     * @public
+     */
     async GetAllPermissions() {
         const response = await this.core.makeRequest("GET", "subusers/permissions");
         const data = await response.json();
         return data;
     }
-    // [POST] /api/client/servers/<UUID>/subusers
+    /**
+     * Creates a new Subuser
+     *
+     * @param email The email for the Subuser
+     * @param permissions The Permissions to grant to the Subuser
+     *
+     * @public
+     */
     async Create(email, permissions) {
-        const data = {
+        const requestData = {
             email: email,
             permissions: permissions
         };
-        const response = await this.core.makeRequest("POST", "subusers", data);
-        const responseData = await response.json();
-        return responseData;
+        const response = await this.core.makeRequest("POST", "subusers", requestData);
+        const data = await response.json();
+        return data;
     }
-    // [PATCH] /api/client/servers/<UUID>/subusers/<SUB_ID>
+    /**
+     * Updates the Subuser
+     *
+     * @param id The ID of the Subuser
+     * @param email The new email of the Subuser
+     * @param permissions The new permissions for the Subuser
+     *
+     * @public
+     */
     async Update(id, email, permissions) {
         const data = {
             email: email,
@@ -40,8 +74,14 @@ export class SubusersAPI {
         const responseData = await response.json();
         return responseData;
     }
-    // [DELETE] /api/client/servers/<UUID>/subusers/<SUB_ID>
+    /**
+     * Deletes the Subuser
+     *
+     * @param id The ID of the Subuser
+     *
+     * @public
+     */
     async Delete(id) {
-        return await this.core.makeRequest("DELETE", `subusers/${id}`);
+        await this.core.makeRequest("DELETE", `subusers/${id}`);
     }
 }

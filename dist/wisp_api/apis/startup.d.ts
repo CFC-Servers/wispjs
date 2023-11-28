@@ -24,9 +24,29 @@ export type StartupDetails = {
         startup_command: string;
     };
 };
+/**
+ * Handles interaction with Server Startup information
+ *
+ * @public
+ */
 export declare class StartupAPI {
     private core;
     constructor(core: WispAPICore);
+    /**
+     * Gets all Startup details for the Server
+     *
+     * @public
+     */
     Get(): Promise<StartupDetails>;
-    Update(startup: UpdateStartup): Promise<Response>;
+    /**
+     * Updates the Startup details for the Server
+     *
+     * @remarks
+     * ℹ️  Pass the variables with their new value to update them. Response will contain the new updated startup
+     *
+     * @param startup The Startup values to update
+     *
+     * @public
+     */
+    Update(startup: UpdateStartup): Promise<StartupDetails>;
 }

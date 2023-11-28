@@ -16,12 +16,16 @@
 <li><a href="../modules/wisp_api_apis_filesystem.html">wisp_api/apis/filesystem</a></li>
 <li><a href="wisp_api_apis_filesystem.FilesystemAPI.html">FilesystemAPI</a></li></ul>
 <h1>Class FilesystemAPI</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Handles interaction with the Server&#39;s File System</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><span class="target">FilesystemAPI</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L52">wisp_api/apis/filesystem.ts:52</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L77">wisp_api/apis/filesystem.ts:77</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -42,8 +46,8 @@
 <a href="wisp_api_apis_filesystem.FilesystemAPI.html#CreateDirectory" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Create<wbr/>Directory</span></a>
 <a href="wisp_api_apis_filesystem.FilesystemAPI.html#DecompressFile" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Decompress<wbr/>File</span></a>
 <a href="wisp_api_apis_filesystem.FilesystemAPI.html#DeleteFiles" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Delete<wbr/>Files</span></a>
-<a href="wisp_api_apis_filesystem.FilesystemAPI.html#DownloadFile" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Download<wbr/>File</span></a>
 <a href="wisp_api_apis_filesystem.FilesystemAPI.html#GetDirectoryContents" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Get<wbr/>Directory<wbr/>Contents</span></a>
+<a href="wisp_api_apis_filesystem.FilesystemAPI.html#GetFileDownloadURL" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Get<wbr/>File<wbr/>DownloadURL</span></a>
 <a href="wisp_api_apis_filesystem.FilesystemAPI.html#ReadFile" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Read<wbr/>File</span></a>
 <a href="wisp_api_apis_filesystem.FilesystemAPI.html#RenameFile" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Rename<wbr/>File</span></a>
 <a href="wisp_api_apis_filesystem.FilesystemAPI.html#WriteFile" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Write<wbr/>File</span></a>
@@ -62,152 +66,253 @@
 <h5><span class="tsd-kind-parameter">core</span>: <a href="wisp_api_apis.WispAPICore.html" class="tsd-signature-type tsd-kind-class">WispAPICore</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="wisp_api_apis_filesystem.FilesystemAPI.html" class="tsd-signature-type tsd-kind-class">FilesystemAPI</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L53">wisp_api/apis/filesystem.ts:53</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L78">wisp_api/apis/filesystem.ts:78</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="core" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>core</span><a href="#core" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">core</span><span class="tsd-signature-symbol">:</span> <a href="wisp_api_apis.WispAPICore.html" class="tsd-signature-type tsd-kind-class">WispAPICore</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L53">wisp_api/apis/filesystem.ts:53</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L78">wisp_api/apis/filesystem.ts:78</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="CompressFiles" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Compress<wbr/>Files</span><a href="#CompressFiles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="CompressFiles.CompressFiles-1"><span class="tsd-kind-call-signature">Compress<wbr/>Files</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">paths</span>, <span class="tsd-kind-parameter">to</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#CompressFiles.CompressFiles-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="CompressFiles.CompressFiles-1"><span class="tsd-kind-call-signature">Compress<wbr/>Files</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">paths</span>, <span class="tsd-kind-parameter">to</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#CompressFiles.CompressFiles-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Compresses the Files at the given paths</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">paths</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5></li>
+<h5><span class="tsd-kind-parameter">paths</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>An array of Paths to Compress</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">to</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">to</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The Directory to write the Compressed Files to</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>⚠️  The resulting file appears to be unpredictably named?</p>
+
+<h4>Throws</h4><p>&quot;Unexpected response code, Compress may not have succeeded&quot;
+If the API returns anything other than a 204, something likely went wrong. Most commonly, this is because the source or destination path did not exist or was not Compressable</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L110">wisp_api/apis/filesystem.ts:110</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L254">wisp_api/apis/filesystem.ts:254</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="CopyFile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Copy<wbr/>File</span><a href="#CopyFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="CopyFile.CopyFile-1"><span class="tsd-kind-call-signature">Copy<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#CopyFile.CopyFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="CopyFile.CopyFile-1"><span class="tsd-kind-call-signature">Copy<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#CopyFile.CopyFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Copies the File at the given path</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path to the File to Copy</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>⚠️  New copy will be written to the same directory, with a name such as <code>test.txt</code> -&gt; <code>test.txt copy-1643810941850</code></p>
+
+<h4>Throws</h4><p>&quot;Unexpected response code, Copy may not have succeeded&quot;
+If the API returns anything other than a 204, something likely went wrong. Most commonly, this is because the file path didn&#39;t exist or wasn&#39;t copyable.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L84">wisp_api/apis/filesystem.ts:84</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L172">wisp_api/apis/filesystem.ts:172</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="CreateDirectory" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Create<wbr/>Directory</span><a href="#CreateDirectory" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="CreateDirectory.CreateDirectory-1"><span class="tsd-kind-call-signature">Create<wbr/>Directory</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#CreateDirectory.CreateDirectory-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="CreateDirectory.CreateDirectory-1"><span class="tsd-kind-call-signature">Create<wbr/>Directory</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#CreateDirectory.CreateDirectory-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Creates a Directory with the given path</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path to the new Directory</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>⚠️  This will silently fail if the given path is present and invalid or unreachable
+⚠️  This is always relative to the Server&#39;s default directory (usually /home/container)</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L63">wisp_api/apis/filesystem.ts:63</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L114">wisp_api/apis/filesystem.ts:114</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="DecompressFile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Decompress<wbr/>File</span><a href="#DecompressFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="DecompressFile.DecompressFile-1"><span class="tsd-kind-call-signature">Decompress<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#DecompressFile.DecompressFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="DecompressFile.DecompressFile-1"><span class="tsd-kind-call-signature">Decompress<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#DecompressFile.DecompressFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Decompresses the File at the given path</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path to the File to Decompress</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Throws</h4><p>&quot;Unexpected response code, Decompress may not have succeeded&quot;
+If the API returns anything other than a 204, something likely went wrong. Most commonly, this is because the given path did not exist or was not reachable</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L116">wisp_api/apis/filesystem.ts:116</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L274">wisp_api/apis/filesystem.ts:274</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="DeleteFiles" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Delete<wbr/>Files</span><a href="#DeleteFiles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="DeleteFiles.DeleteFiles-1"><span class="tsd-kind-call-signature">Delete<wbr/>Files</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">paths</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#DeleteFiles.DeleteFiles-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="DeleteFiles.DeleteFiles-1"><span class="tsd-kind-call-signature">Delete<wbr/>Files</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">paths</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#DeleteFiles.DeleteFiles-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Deletes the Files at all of the given paths</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">paths</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">paths</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>An array of File Paths to Delete</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Throws</h4><p>&quot;Unexpected response code, Delete may not have succeeded&quot;
+If the API returns anything other than a 204, something likely went wrong. Most commonly, this is because the file path didn&#39;t exist or wasn&#39;t deleteable.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L90">wisp_api/apis/filesystem.ts:90</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="DownloadFile" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>Download<wbr/>File</span><a href="#DownloadFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="DownloadFile.DownloadFile-1"><span class="tsd-kind-call-signature">Download<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.DownloadFileResponse.html" class="tsd-signature-type tsd-kind-type-alias">DownloadFileResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#DownloadFile.DownloadFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.DownloadFileResponse.html" class="tsd-signature-type tsd-kind-type-alias">DownloadFileResponse</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L96">wisp_api/apis/filesystem.ts:96</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L192">wisp_api/apis/filesystem.ts:192</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="GetDirectoryContents" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Get<wbr/>Directory<wbr/>Contents</span><a href="#GetDirectoryContents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="GetDirectoryContents.GetDirectoryContents-1"><span class="tsd-kind-call-signature">Get<wbr/>Directory<wbr/>Contents</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.DirectoryContentsResponse.html" class="tsd-signature-type tsd-kind-type-alias">DirectoryContentsResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#GetDirectoryContents.GetDirectoryContents-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="GetDirectoryContents.GetDirectoryContents-1"><span class="tsd-kind-call-signature">Get<wbr/>Directory<wbr/>Contents</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.GetDirectoryContentsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetDirectoryContentsResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#GetDirectoryContents.GetDirectoryContents-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the Contents of the given Directory</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.DirectoryContentsResponse.html" class="tsd-signature-type tsd-kind-type-alias">DirectoryContentsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The path to list</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.GetDirectoryContentsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetDirectoryContentsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Throws</h4><p><a href="../types/wisp_api_apis_filesystem.GetDirectoryContentsErrorCode.html" class="tsd-kind-type-alias">GetDirectoryContentsErrorCode</a></p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L57">wisp_api/apis/filesystem.ts:57</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L90">wisp_api/apis/filesystem.ts:90</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="GetFileDownloadURL" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>Get<wbr/>File<wbr/>DownloadURL</span><a href="#GetFileDownloadURL" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="GetFileDownloadURL.GetFileDownloadURL-1"><span class="tsd-kind-call-signature">Get<wbr/>File<wbr/>DownloadURL</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#GetFileDownloadURL.GetFileDownloadURL-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Retrieves a Download URL for a File</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path to the File</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>⚠️  This will return a Download URL even if the given file does not exist</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L211">wisp_api/apis/filesystem.ts:211</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="ReadFile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Read<wbr/>File</span><a href="#ReadFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="ReadFile.ReadFile-1"><span class="tsd-kind-call-signature">Read<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.FileReadResponse.html" class="tsd-signature-type tsd-kind-type-alias">FileReadResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#ReadFile.ReadFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="ReadFile.ReadFile-1"><span class="tsd-kind-call-signature">Read<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#ReadFile.ReadFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Retrieves the contents of the File at the given path</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.FileReadResponse.html" class="tsd-signature-type tsd-kind-type-alias">FileReadResponse</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path to the File to read</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Throws</h4><p>&quot;Server returned error code: {number}&quot;
+This error is often thrown if the given path doesn&#39;t exist, or is not readable. The error code would be 404.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L68">wisp_api/apis/filesystem.ts:68</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L129">wisp_api/apis/filesystem.ts:129</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="RenameFile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Rename<wbr/>File</span><a href="#RenameFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="RenameFile.RenameFile-1"><span class="tsd-kind-call-signature">Rename<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span>, <span class="tsd-kind-parameter">to</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#RenameFile.RenameFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="RenameFile.RenameFile-1"><span class="tsd-kind-call-signature">Rename<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span>, <span class="tsd-kind-parameter">to</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#RenameFile.RenameFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Renames (or moves) the given File</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path to the File</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">to</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">to</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The new path of the File</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Throws</h4><p>&quot;Unexpected response code, Rename may not have succeeded&quot;
+If the API returns anything other than a 204, something likely went wrong. Most commonly, this is because the source or destination path did not exist or was not reachable</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L104">wisp_api/apis/filesystem.ts:104</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L230">wisp_api/apis/filesystem.ts:230</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="WriteFile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Write<wbr/>File</span><a href="#WriteFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="WriteFile.WriteFile-1"><span class="tsd-kind-call-signature">Write<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span>, <span class="tsd-kind-parameter">content</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#WriteFile.WriteFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="WriteFile.WriteFile-1"><span class="tsd-kind-call-signature">Write<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span>, <span class="tsd-kind-parameter">content</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#WriteFile.WriteFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Writes the given content to the File at the given path</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path to the File</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">content</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">content</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full content of the File</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>⚠️  Overwrites the file if it already exists
+⚠️  This function silently fails if the target path is not writeable</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/filesystem.ts#L77">wisp_api/apis/filesystem.ts:77</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/filesystem.ts#L153">wisp_api/apis/filesystem.ts:153</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -234,8 +339,8 @@
 <li><a href="#CreateDirectory" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Create<wbr/>Directory</span></a></li>
 <li><a href="#DecompressFile" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Decompress<wbr/>File</span></a></li>
 <li><a href="#DeleteFiles" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Delete<wbr/>Files</span></a></li>
-<li><a href="#DownloadFile" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Download<wbr/>File</span></a></li>
 <li><a href="#GetDirectoryContents" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Get<wbr/>Directory<wbr/>Contents</span></a></li>
+<li><a href="#GetFileDownloadURL" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Get<wbr/>File<wbr/>DownloadURL</span></a></li>
 <li><a href="#ReadFile" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Read<wbr/>File</span></a></li>
 <li><a href="#RenameFile" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Rename<wbr/>File</span></a></li>
 <li><a href="#WriteFile" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Write<wbr/>File</span></a></li></ul></div></details></div>

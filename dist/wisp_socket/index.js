@@ -2,6 +2,11 @@ import { io } from "socket.io-client";
 // TODO: Handle errors better
 // TODO: Allow for no ghToken
 // TODO: Don't require a logger
+/**
+ * The primary interface to the Websocket API
+ *
+ * @internal
+ */
 export class WispSocket {
     constructor(logger, api, ghToken) {
         this.logger = logger;
@@ -10,10 +15,31 @@ export class WispSocket {
         this.url = "";
         this.token = "";
     }
+    /**
+     * Sets a callback to run on the Websocket Info before saving the details.
+     *
+     * @remarks
+     * ℹ️  This can be used to modify the URL or token after its retrieved from the API
+     *
+     * @param preprocessor The callback to run when the data is received from the API
+     *
+     * @public
+     */
+    setWebsocketDetailsPreprocessor(preprocessor) {
+        this._websocketDetailsPreprocessor = preprocessor;
+    }
+    /**
+     * Requests and saves the Websocket details from the API
+     *
+     * @internal
+     */
     setDetails() {
         return new Promise((resolve, reject) => {
             this.api.getWebsocketDetails().then((websocketInfo) => {
-                this.url = websocketInfo.url.replace("us-phs-chi23.physgun.com:8080", "wispproxy.cfcservers.org");
+                if (this._websocketDetailsPreprocessor) {
+                    this._websocketDetailsPreprocessor(websocketInfo);
+                }
+                this.url = websocketInfo.url;
                 this.token = websocketInfo.token;
                 this.logger.info(`Got Websocket Details`);
                 resolve();
@@ -23,6 +49,11 @@ export class WispSocket {
             });
         });
     }
+    /**
+     * Establishes the actual Websocket connection and initializes the event listeners
+     *
+     * @internal
+     */
     _connect() {
         let reconnectDelay = 1;
         return new Promise((resolve, reject) => {
@@ -78,10 +109,20 @@ export class WispSocket {
             console.log("Sent socket.connect()");
         });
     }
+    /**
+     * Sets the Websocket details and initializes the Websocket connection
+     *
+     * @internal
+     */
     async connect() {
         await this.setDetails();
         await this._connect();
     }
+    /**
+     * Disconnects from the websocket
+     *
+     * @internal
+     */
     disconnect() {
         return new Promise((resolve, reject) => {
             let done = false;
@@ -101,6 +142,13 @@ export class WispSocket {
             }, 5000);
         });
     }
+    /**
+     * Searches all file contents for the given query
+     *
+     * @param query The query string to search for
+     *
+     * @public
+     */
     filesearch(query) {
         return new Promise((resolve, reject) => {
             let done = false;
@@ -111,11 +159,18 @@ export class WispSocket {
             this.socket.emit("filesearch-start", query);
             setTimeout(() => {
                 if (!done) {
-                    reject();
+                    reject("Timeout");
                 }
             }, 10000);
         });
     }
+    /**
+     * Performs a git pull operation on the given directory
+     *
+     * @param dir The full directory path to perform a pull on
+     *
+     * @public
+     */
     gitPull(dir) {
         return new Promise((resolve, reject) => {
             let isPrivate = false;
@@ -165,6 +220,15 @@ export class WispSocket {
             sendRequest();
         });
     }
+    /**
+     * Clones a new Repo to the given directory
+     *
+     * @param url The HTTPS URL of the repository
+     * @param dir The full path of the directory to clone the repository to
+     * @param branch The branch of the repository to clone
+     *
+     * @public
+     */
     gitClone(url, dir, branch) {
         return new Promise((resolve, reject) => {
             let isPrivate = false;
@@ -212,11 +276,52 @@ export class WispSocket {
     }
     // TODO: Should we maintain or own listener chain?
     // TODO: Create a way to remove listeners
+    /**
+     * Adds a new callback that will run any time a console message is rececived
+     *
+     * @param callback The callback to run, takes a single param, `message`, a string
+     *
+     * @public
+     */
     addConsoleListener(callback) {
         this.socket.on("console", (data) => {
             callback(data.line);
         });
     }
+    /**
+     * Sends a command to the server and then waits until output with the given prefix is seen in a console message
+     *
+     * @example
+     * Runs a custom lua command that will prefix its output with our nonce, then prints the output from that command
+     * ```lua
+     * -- lua/autorun/server/nonce_example.lua
+     * concommand.Add( "myCommand", function( ply, _, args )
+     *     if IsValid( ply ) then return end
+     *
+     *     local nonce = args[1]
+     *     print( nonce .. "Command output" )
+     * end )
+     * ```
+     * ```js
+     * const nonce = "abc123";
+     * const command = `myCommand "${nonce}"`;
+     * try {
+     *     const output = await wisp.socket.sendCommandNonce(nonce, command);
+     *     console.log("Output from command:", output);
+     * catch (error) {
+     *     console.error(error);
+     * }
+     * ```
+     *
+     * @remarks
+     * ℹ️  This is useful if you run code on your Server that will print output with the same prefix, letting you run commands and also receive output for it
+     *
+     * @param nonce The short, unique string that your output will be prefixed with
+     * @param command The full command string to send
+     * @param timeout How long to wait for output before timing out
+     *
+     * @public
+     */
     sendCommandNonce(nonce, command, timeout = 1000) {
         return new Promise((resolve, reject) => {
             let timeoutObj;

@@ -16,12 +16,16 @@
 <li><a href="../modules/wisp_api_apis_mods.html">wisp_api/apis/mods</a></li>
 <li><a href="wisp_api_apis_mods.ModsAPI.html">ModsAPI</a></li></ul>
 <h1>Class ModsAPI</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Handles Listing and Installating of Mods</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><span class="target">ModsAPI</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/mods.ts#L21">wisp_api/apis/mods.ts:21</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/mods.ts#L26">wisp_api/apis/mods.ts:26</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -37,8 +41,8 @@
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
-<div class="tsd-index-list"><a href="wisp_api_apis_mods.ModsAPI.html#Install" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Install</span></a>
-<a href="wisp_api_apis_mods.ModsAPI.html#List" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>List</span></a>
+<div class="tsd-index-list"><a href="wisp_api_apis_mods.ModsAPI.html#List" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>List</span></a>
+<a href="wisp_api_apis_mods.ModsAPI.html#ToggleInstall" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Toggle<wbr/>Install</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
@@ -54,42 +58,46 @@
 <h5><span class="tsd-kind-parameter">core</span>: <a href="wisp_api_apis.WispAPICore.html" class="tsd-signature-type tsd-kind-class">WispAPICore</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="wisp_api_apis_mods.ModsAPI.html" class="tsd-signature-type tsd-kind-class">ModsAPI</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/mods.ts#L22">wisp_api/apis/mods.ts:22</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/mods.ts#L27">wisp_api/apis/mods.ts:27</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="core" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>core</span><a href="#core" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">core</span><span class="tsd-signature-symbol">:</span> <a href="wisp_api_apis.WispAPICore.html" class="tsd-signature-type tsd-kind-class">WispAPICore</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/mods.ts#L22">wisp_api/apis/mods.ts:22</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/mods.ts#L27">wisp_api/apis/mods.ts:27</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
-<section class="tsd-panel tsd-member"><a id="Install" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>Install</span><a href="#Install" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="Install.Install-1"><span class="tsd-kind-call-signature">Install</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#Install.Install-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/mods.ts#L34">wisp_api/apis/mods.ts:34</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="List" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>List</span><a href="#List" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="List.List-1"><span class="tsd-kind-call-signature">List</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">search</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_mods.GetModsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetModsResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#List.List-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="List.List-1"><span class="tsd-kind-call-signature">List</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_mods.GetModsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetModsResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#List.List-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Lists all Mods available to the Server</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_mods.GetModsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetModsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/mods.ts#L35">wisp_api/apis/mods.ts:35</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="ToggleInstall" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>Toggle<wbr/>Install</span><a href="#ToggleInstall" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="ToggleInstall.ToggleInstall-1"><span class="tsd-kind-call-signature">Toggle<wbr/>Install</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#ToggleInstall.ToggleInstall-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Installs or Uninstalls the Mod with the given id</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">search</span>: <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = null</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_mods.GetModsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetModsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The ID of the Mod to Install/Uninstall</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/mods.ts#L25">wisp_api/apis/mods.ts:25</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/mods.ts#L50">wisp_api/apis/mods.ts:50</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -111,8 +119,8 @@
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
 <li><a href="#core" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>core</span></a></li>
-<li><a href="#Install" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Install</span></a></li>
-<li><a href="#List" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>List</span></a></li></ul></div></details></div>
+<li><a href="#List" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>List</span></a></li>
+<li><a href="#ToggleInstall" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Toggle<wbr/>Install</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>wispjs</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="..">

@@ -48,13 +48,59 @@ export type GetAllSubuserPermissionsResponse = {
     permissions: Permission[];
     assignable: Permission[];
 };
+/**
+ * Handles interfacing with the Subusers API
+ *
+ * @public
+ */
 export declare class SubusersAPI {
     private core;
     constructor(core: WispAPICore);
+    /**
+     * Lists all Subusers for the Server
+     *
+     * @public
+     */
     List(): Promise<GetSubusersResponse>;
+    /**
+     * Retrieves the details for the Subuser
+     *
+     * @param id The ID of the Subuser
+     *
+     * @public
+     */
     GetDetails(id: string): Promise<Subuser>;
+    /**
+     * Get all permissions available to Subusers
+     *
+     * @public
+     */
     GetAllPermissions(): Promise<GetAllSubuserPermissionsResponse>;
+    /**
+     * Creates a new Subuser
+     *
+     * @param email The email for the Subuser
+     * @param permissions The Permissions to grant to the Subuser
+     *
+     * @public
+     */
     Create(email: string, permissions: Permission[]): Promise<Subuser>;
+    /**
+     * Updates the Subuser
+     *
+     * @param id The ID of the Subuser
+     * @param email The new email of the Subuser
+     * @param permissions The new permissions for the Subuser
+     *
+     * @public
+     */
     Update(id: string, email: string, permissions: Permission[]): Promise<Subuser>;
-    Delete(id: string): Promise<Response>;
+    /**
+     * Deletes the Subuser
+     *
+     * @param id The ID of the Subuser
+     *
+     * @public
+     */
+    Delete(id: string): Promise<void>;
 }

@@ -15,14 +15,18 @@
 <li><a href="../index.html">wispjs</a></li>
 <li><a href="../modules/wisp_socket.html">wisp_socket</a></li>
 <li><a href="wisp_socket.WispSocket.html">WispSocket</a></li></ul>
-<h1>Class WispSocket</h1></div>
+<h1>Class WispSocket<code class="tsd-tag ts-flagInternal">Internal</code> </h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>The primary interface to the Websocket API</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><span class="target">WispSocket</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L63">wisp_socket/index.ts:63</a></li>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L75">wisp_socket/index.ts:75</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L130">wisp_socket/index.ts:130</a></li>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L149">wisp_socket/index.ts:149</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -34,7 +38,8 @@
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="wisp_socket.WispSocket.html#api" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>api</span></a>
+<div class="tsd-index-list"><a href="wisp_socket.WispSocket.html#_websocketDetailsPreprocessor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_websocket<wbr/>Details<wbr/>Preprocessor</span></a>
+<a href="wisp_socket.WispSocket.html#api" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>api</span></a>
 <a href="wisp_socket.WispSocket.html#ghToken" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>gh<wbr/>Token</span></a>
 <a href="wisp_socket.WispSocket.html#logger" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>logger</span></a>
 <a href="wisp_socket.WispSocket.html#socket" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>socket</span></a>
@@ -52,6 +57,7 @@
 <a href="wisp_socket.WispSocket.html#gitPull" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>git<wbr/>Pull</span></a>
 <a href="wisp_socket.WispSocket.html#sendCommandNonce" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>send<wbr/>Command<wbr/>Nonce</span></a>
 <a href="wisp_socket.WispSocket.html#setDetails" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Details</span></a>
+<a href="wisp_socket.WispSocket.html#setWebsocketDetailsPreprocessor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Websocket<wbr/>Details<wbr/>Preprocessor</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
@@ -71,59 +77,72 @@
 <h5><span class="tsd-kind-parameter">ghToken</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="wisp_socket.WispSocket.html" class="tsd-signature-type tsd-kind-class">WispSocket</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L76">wisp_socket/index.ts:76</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L150">wisp_socket/index.ts:150</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
+<section class="tsd-panel tsd-member"><a id="_websocketDetailsPreprocessor" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>_websocket<wbr/>Details<wbr/>Preprocessor</span><a href="#_websocketDetailsPreprocessor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">_websocket<wbr/>Details<wbr/>Preprocessor</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../types/wisp_socket.WebsocketDetailsPreprocessor.html" class="tsd-signature-type tsd-kind-type-alias">WebsocketDetailsPreprocessor</a></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L137">wisp_socket/index.ts:137</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="api" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>api</span><a href="#api" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">api</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L66">wisp_socket/index.ts:66</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L133">wisp_socket/index.ts:133</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="ghToken" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>gh<wbr/>Token</span><a href="#ghToken" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">gh<wbr/>Token</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L69">wisp_socket/index.ts:69</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L136">wisp_socket/index.ts:136</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="logger" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>logger</span><a href="#logger" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">logger</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L65">wisp_socket/index.ts:65</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L132">wisp_socket/index.ts:132</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="socket" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>socket</span><a href="#socket" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">socket</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Socket</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.ServerToClientEvents.html" class="tsd-signature-type tsd-kind-type-alias">ServerToClientEvents</a><span class="tsd-signature-symbol">, </span><a href="../types/wisp_socket.ClientToServerEvents.html" class="tsd-signature-type tsd-kind-type-alias">ClientToServerEvents</a><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L64">wisp_socket/index.ts:64</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L131">wisp_socket/index.ts:131</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="token" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>token</span><a href="#token" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">token</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L68">wisp_socket/index.ts:68</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L135">wisp_socket/index.ts:135</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="url" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>url</span><a href="#url" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">url</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L67">wisp_socket/index.ts:67</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L134">wisp_socket/index.ts:134</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="_connect" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_connect</span><a href="#_connect" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="_connect._connect-1"><span class="tsd-kind-call-signature">_connect</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#_connect._connect-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<li class="tsd-description"><code class="tsd-tag ts-flagInternal">Internal</code> 
+<div class="tsd-comment tsd-typography"><p>Establishes the actual Websocket connection and initializes the event listeners</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L100">wisp_socket/index.ts:100</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L204">wisp_socket/index.ts:204</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="addConsoleListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Console<wbr/>Listener</span><a href="#addConsoleListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="addConsoleListener.addConsoleListener-1"><span class="tsd-kind-call-signature">add<wbr/>Console<wbr/>Listener</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">callback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#addConsoleListener.addConsoleListener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Adds a new callback that will run any time a console message is rececived</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">callback</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">message</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>The callback to run, takes a single param, <code>message</code>, a string</p>
+</div>
+<div class="tsd-comment tsd-typography"></div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
@@ -135,93 +154,168 @@
 <li>
 <h5><span class="tsd-kind-parameter">message</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L332">wisp_socket/index.ts:332</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L480">wisp_socket/index.ts:480</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="connect" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>connect</span><a href="#connect" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="connect.connect-1"><span class="tsd-kind-call-signature">connect</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#connect.connect-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<li class="tsd-description"><code class="tsd-tag ts-flagInternal">Internal</code> 
+<div class="tsd-comment tsd-typography"><p>Sets the Websocket details and initializes the Websocket connection</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L168">wisp_socket/index.ts:168</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L277">wisp_socket/index.ts:277</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="disconnect" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>disconnect</span><a href="#disconnect" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="disconnect.disconnect-1"><span class="tsd-kind-call-signature">disconnect</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#disconnect.disconnect-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<li class="tsd-description"><code class="tsd-tag ts-flagInternal">Internal</code> 
+<div class="tsd-comment tsd-typography"><p>Disconnects from the websocket</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L173">wisp_socket/index.ts:173</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L287">wisp_socket/index.ts:287</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="filesearch" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>filesearch</span><a href="#filesearch" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="filesearch.filesearch-1"><span class="tsd-kind-call-signature">filesearch</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">query</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.FilesearchResults.html" class="tsd-signature-type tsd-kind-type-alias">FilesearchResults</a><span class="tsd-signature-symbol">&gt;</span><a href="#filesearch.filesearch-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Searches all file contents for the given query</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">query</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.FilesearchResults.html" class="tsd-signature-type tsd-kind-type-alias">FilesearchResults</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">query</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The query string to search for</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.FilesearchResults.html" class="tsd-signature-type tsd-kind-type-alias">FilesearchResults</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L197">wisp_socket/index.ts:197</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L319">wisp_socket/index.ts:319</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="gitClone" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>git<wbr/>Clone</span><a href="#gitClone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="gitClone.gitClone-1"><span class="tsd-kind-call-signature">git<wbr/>Clone</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">url</span>, <span class="tsd-kind-parameter">dir</span>, <span class="tsd-kind-parameter">branch</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.GitCloneResult.html" class="tsd-signature-type tsd-kind-type-alias">GitCloneResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#gitClone.gitClone-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Clones a new Repo to the given directory</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">url</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The HTTPS URL of the repository</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">dir</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">dir</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full path of the directory to clone the repository to</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">branch</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.GitCloneResult.html" class="tsd-signature-type tsd-kind-type-alias">GitCloneResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">branch</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The branch of the repository to clone</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.GitCloneResult.html" class="tsd-signature-type tsd-kind-type-alias">GitCloneResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L276">wisp_socket/index.ts:276</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L416">wisp_socket/index.ts:416</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="gitPull" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>git<wbr/>Pull</span><a href="#gitPull" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="gitPull.gitPull-1"><span class="tsd-kind-call-signature">git<wbr/>Pull</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">dir</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.GitPullResult.html" class="tsd-signature-type tsd-kind-type-alias">GitPullResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#gitPull.gitPull-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Performs a git pull operation on the given directory</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">dir</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.GitPullResult.html" class="tsd-signature-type tsd-kind-type-alias">GitPullResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">dir</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full directory path to perform a pull on</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_socket.GitPullResult.html" class="tsd-signature-type tsd-kind-type-alias">GitPullResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L216">wisp_socket/index.ts:216</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L346">wisp_socket/index.ts:346</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="sendCommandNonce" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>send<wbr/>Command<wbr/>Nonce</span><a href="#sendCommandNonce" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="sendCommandNonce.sendCommandNonce-1"><span class="tsd-kind-call-signature">send<wbr/>Command<wbr/>Nonce</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">nonce</span>, <span class="tsd-kind-parameter">command</span>, <span class="tsd-kind-parameter">timeout</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#sendCommandNonce.sendCommandNonce-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sends a command to the server and then waits until output with the given prefix is seen in a console message</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">nonce</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">nonce</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The short, unique string that your output will be prefixed with</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">command</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">command</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The full command string to send</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">timeout</span>: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1000</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">timeout</span>: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1000</span></h5>
+<div class="tsd-comment tsd-typography"><p>How long to wait for output before timing out</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Example</h4><p>Runs a custom lua command that will prefix its output with our nonce, then prints the output from that command</p>
+<pre><code class="language-lua"><span class="hl-8">-- lua/autorun/server/nonce_example.lua</span><br/><span class="hl-6">concommand</span><span class="hl-0">.</span><span class="hl-7">Add</span><span class="hl-0">( </span><span class="hl-2">&quot;myCommand&quot;</span><span class="hl-0">, </span><span class="hl-5">function</span><span class="hl-0">( </span><span class="hl-6">ply</span><span class="hl-0">, </span><span class="hl-6">_</span><span class="hl-0">, </span><span class="hl-6">args</span><span class="hl-0"> )</span><br/><span class="hl-0">    </span><span class="hl-5">if</span><span class="hl-0"> </span><span class="hl-7">IsValid</span><span class="hl-0">( </span><span class="hl-6">ply</span><span class="hl-0"> ) </span><span class="hl-5">then</span><span class="hl-0"> </span><span class="hl-5">return</span><span class="hl-0"> </span><span class="hl-5">end</span><br/><br/><span class="hl-0">    </span><span class="hl-4">local</span><span class="hl-0"> </span><span class="hl-6">nonce</span><span class="hl-0"> = </span><span class="hl-6">args</span><span class="hl-0">[</span><span class="hl-3">1</span><span class="hl-0">]</span><br/><span class="hl-0">    </span><span class="hl-7">print</span><span class="hl-0">( </span><span class="hl-6">nonce</span><span class="hl-0"> .. </span><span class="hl-2">&quot;Command output&quot; </span><span class="hl-0">)</span><br/><span class="hl-5">end</span><span class="hl-0"> )</span>
+</code><button>Copy</button></pre>
+<pre><code class="language-js"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-9">nonce</span><span class="hl-0"> = </span><span class="hl-2">&quot;abc123&quot;</span><span class="hl-0">;</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-9">command</span><span class="hl-0"> = </span><span class="hl-2">`myCommand &quot;</span><span class="hl-4">${</span><span class="hl-6">nonce</span><span class="hl-4">}</span><span class="hl-2">&quot;`</span><span class="hl-0">;</span><br/><span class="hl-5">try</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-9">output</span><span class="hl-0"> = </span><span class="hl-5">await</span><span class="hl-0"> </span><span class="hl-6">wisp</span><span class="hl-0">.</span><span class="hl-6">socket</span><span class="hl-0">.</span><span class="hl-7">sendCommandNonce</span><span class="hl-0">(</span><span class="hl-6">nonce</span><span class="hl-0">, </span><span class="hl-6">command</span><span class="hl-0">);</span><br/><span class="hl-0">    </span><span class="hl-6">console</span><span class="hl-0">.</span><span class="hl-7">log</span><span class="hl-0">(</span><span class="hl-2">&quot;Output from command:&quot;</span><span class="hl-0">, </span><span class="hl-6">output</span><span class="hl-0">);</span><br/><span class="hl-5">catch</span><span class="hl-0"> (</span><span class="hl-6">error</span><span class="hl-0">) {</span><br/><span class="hl-0">    </span><span class="hl-6">console</span><span class="hl-0">.</span><span class="hl-7">error</span><span class="hl-0">(</span><span class="hl-6">error</span><span class="hl-0">);</span><br/><span class="hl-0">}</span>
+</code><button>Copy</button></pre>
+
+<h4>Remarks</h4><p>ℹ️  This is useful if you run code on your Server that will print output with the same prefix, letting you run commands and also receive output for it</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L338">wisp_socket/index.ts:338</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L521">wisp_socket/index.ts:521</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="setDetails" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Details</span><a href="#setDetails" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="setDetails.setDetails-1"><span class="tsd-kind-call-signature">set<wbr/>Details</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#setDetails.setDetails-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<li class="tsd-description"><code class="tsd-tag ts-flagInternal">Internal</code> 
+<div class="tsd-comment tsd-typography"><p>Requests and saves the Websocket details from the API</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_socket/index.ts#L85">wisp_socket/index.ts:85</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L179">wisp_socket/index.ts:179</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="setWebsocketDetailsPreprocessor" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>set<wbr/>Websocket<wbr/>Details<wbr/>Preprocessor</span><a href="#setWebsocketDetailsPreprocessor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="setWebsocketDetailsPreprocessor.setWebsocketDetailsPreprocessor-1"><span class="tsd-kind-call-signature">set<wbr/>Websocket<wbr/>Details<wbr/>Preprocessor</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">preprocessor</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#setWebsocketDetailsPreprocessor.setWebsocketDetailsPreprocessor-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets a callback to run on the Websocket Info before saving the details.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">preprocessor</span>: <a href="../types/wisp_socket.WebsocketDetailsPreprocessor.html" class="tsd-signature-type tsd-kind-type-alias">WebsocketDetailsPreprocessor</a></h5>
+<div class="tsd-comment tsd-typography"><p>The callback to run when the data is received from the API</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>ℹ️  This can be used to modify the URL or token after its retrieved from the API</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_socket/index.ts#L169">wisp_socket/index.ts:169</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -242,6 +336,7 @@
 <div class="tsd-accordion-details">
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
+<li><a href="#_websocketDetailsPreprocessor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_websocket<wbr/>Details<wbr/>Preprocessor</span></a></li>
 <li><a href="#api" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>api</span></a></li>
 <li><a href="#ghToken" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>gh<wbr/>Token</span></a></li>
 <li><a href="#logger" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>logger</span></a></li>
@@ -256,7 +351,8 @@
 <li><a href="#gitClone" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>git<wbr/>Clone</span></a></li>
 <li><a href="#gitPull" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>git<wbr/>Pull</span></a></li>
 <li><a href="#sendCommandNonce" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>send<wbr/>Command<wbr/>Nonce</span></a></li>
-<li><a href="#setDetails" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Details</span></a></li></ul></div></details></div>
+<li><a href="#setDetails" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Details</span></a></li>
+<li><a href="#setWebsocketDetailsPreprocessor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Websocket<wbr/>Details<wbr/>Preprocessor</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>wispjs</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="..">

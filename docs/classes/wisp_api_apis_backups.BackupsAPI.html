@@ -16,12 +16,16 @@
 <li><a href="../modules/wisp_api_apis_backups.html">wisp_api/apis/backups</a></li>
 <li><a href="wisp_api_apis_backups.BackupsAPI.html">BackupsAPI</a></li></ul>
 <h1>Class BackupsAPI</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Handles basic server backup tasks, such as creating, restoring, and deleting backups</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><span class="target">BackupsAPI</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L27">wisp_api/apis/backups.ts:27</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L83">wisp_api/apis/backups.ts:83</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -40,9 +44,9 @@
 <div class="tsd-index-list"><a href="wisp_api_apis_backups.BackupsAPI.html#Create" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Create</span></a>
 <a href="wisp_api_apis_backups.BackupsAPI.html#Delete" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Delete</span></a>
 <a href="wisp_api_apis_backups.BackupsAPI.html#Deploy" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Deploy</span></a>
-<a href="wisp_api_apis_backups.BackupsAPI.html#Download" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Download</span></a>
+<a href="wisp_api_apis_backups.BackupsAPI.html#GetDownloadURL" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Get<wbr/>DownloadURL</span></a>
 <a href="wisp_api_apis_backups.BackupsAPI.html#List" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>List</span></a>
-<a href="wisp_api_apis_backups.BackupsAPI.html#Lock" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Lock</span></a>
+<a href="wisp_api_apis_backups.BackupsAPI.html#ToggleLock" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Toggle<wbr/>Lock</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
@@ -58,89 +62,134 @@
 <h5><span class="tsd-kind-parameter">core</span>: <a href="wisp_api_apis.WispAPICore.html" class="tsd-signature-type tsd-kind-class">WispAPICore</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="wisp_api_apis_backups.BackupsAPI.html" class="tsd-signature-type tsd-kind-class">BackupsAPI</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L28">wisp_api/apis/backups.ts:28</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L84">wisp_api/apis/backups.ts:84</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="core" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>core</span><a href="#core" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">core</span><span class="tsd-signature-symbol">:</span> <a href="wisp_api_apis.WispAPICore.html" class="tsd-signature-type tsd-kind-class">WispAPICore</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L28">wisp_api/apis/backups.ts:28</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L84">wisp_api/apis/backups.ts:84</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="Create" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Create</span><a href="#Create" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="Create.Create-1"><span class="tsd-kind-call-signature">Create</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#Create.Create-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="Create.Create-1"><span class="tsd-kind-call-signature">Create</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_backups.CreateBackupResponse.html" class="tsd-signature-type tsd-kind-type-alias">CreateBackupResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#Create.Create-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Creates a new backup for the server</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The name of the Backup</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_backups.CreateBackupResponse.html" class="tsd-signature-type tsd-kind-type-alias">CreateBackupResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>⚠️  This can fail to create a Backup even if the function completes successfully
+For example, if the backup would exceed the size limit (and the limit is not 0), the system wouldn&#39;t know it failed until it hit the limit.</p>
+<p>⚠️  &quot;It is recomended to stop your server before starting a backup. Backups created while the server is on can contain corupted data.&quot;</p>
+<p>Multiple Backups can exist with the same name.</p>
+
+<h4>Throws</h4><p><a href="../types/wisp_api_apis_backups.BackupErrorCode.html" class="tsd-kind-type-alias">BackupErrorCode</a> 
+If the server returns an error code, it will be thrown verbatim here</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L40">wisp_api/apis/backups.ts:40</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L116">wisp_api/apis/backups.ts:116</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="Delete" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Delete</span><a href="#Delete" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="Delete.Delete-1"><span class="tsd-kind-call-signature">Delete</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#Delete.Delete-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="Delete.Delete-1"><span class="tsd-kind-call-signature">Delete</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#Delete.Delete-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Deletes the Backup</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The ID of the Backup</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L64">wisp_api/apis/backups.ts:64</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L178">wisp_api/apis/backups.ts:178</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="Deploy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>Deploy</span><a href="#Deploy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="Deploy.Deploy-1"><span class="tsd-kind-call-signature">Deploy</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#Deploy.Deploy-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Deploys the Backup to the Server</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The ID of the Backup</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p><strong>⚠️  This can be dangerous!</strong>
+The Backup will overwrite the entire Server, erasing any new data since the Backup&#39;s creation</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L51">wisp_api/apis/backups.ts:51</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="Download" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>Download</span><a href="#Download" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L152">wisp_api/apis/backups.ts:152</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="GetDownloadURL" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>Get<wbr/>DownloadURL</span><a href="#GetDownloadURL" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="Download.Download-1"><span class="tsd-kind-call-signature">Download</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.DownloadFileResponse.html" class="tsd-signature-type tsd-kind-type-alias">DownloadFileResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#Download.Download-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="GetDownloadURL.GetDownloadURL-1"><span class="tsd-kind-call-signature">Get<wbr/>DownloadURL</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#GetDownloadURL.GetDownloadURL-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Retrieves a URL from which the Backup can be downloaded</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_filesystem.DownloadFileResponse.html" class="tsd-signature-type tsd-kind-type-alias">DownloadFileResponse</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The ID of the Backup</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4><p>The download URL</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L56">wisp_api/apis/backups.ts:56</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L164">wisp_api/apis/backups.ts:164</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="List" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>List</span><a href="#List" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="List.List-1"><span class="tsd-kind-call-signature">List</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_backups.GetBackupsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetBackupsResponse</a><span class="tsd-signature-symbol">&gt;</span><a href="#List.List-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_backups.GetBackupsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetBackupsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Lists all current backups for the server</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_backups.GetBackupsResponse.html" class="tsd-signature-type tsd-kind-type-alias">GetBackupsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L31">wisp_api/apis/backups.ts:31</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="Lock" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>Lock</span><a href="#Lock" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L91">wisp_api/apis/backups.ts:91</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="ToggleLock" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>Toggle<wbr/>Lock</span><a href="#ToggleLock" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="Lock.Lock-1"><span class="tsd-kind-call-signature">Lock</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><a href="#Lock.Lock-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="ToggleLock.ToggleLock-1"><span class="tsd-kind-call-signature">Toggle<wbr/>Lock</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_backups.Backup.html" class="tsd-signature-type tsd-kind-type-alias">Backup</a><span class="tsd-signature-symbol">&gt;</span><a href="#ToggleLock.ToggleLock-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Toggles the &quot;Locked&quot; status of the Backup</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>The ID of the Backup</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/wisp_api_apis_backups.Backup.html" class="tsd-signature-type tsd-kind-type-alias">Backup</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/28bac4b/wisp_api/apis/backups.ts#L45">wisp_api/apis/backups.ts:45</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/CFC-Servers/wispjs/blob/0755b13/wisp_api/apis/backups.ts#L134">wisp_api/apis/backups.ts:134</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -165,9 +214,9 @@
 <li><a href="#Create" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Create</span></a></li>
 <li><a href="#Delete" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Delete</span></a></li>
 <li><a href="#Deploy" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Deploy</span></a></li>
-<li><a href="#Download" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Download</span></a></li>
+<li><a href="#GetDownloadURL" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Get<wbr/>DownloadURL</span></a></li>
 <li><a href="#List" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>List</span></a></li>
-<li><a href="#Lock" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Lock</span></a></li></ul></div></details></div>
+<li><a href="#ToggleLock" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>Toggle<wbr/>Lock</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>wispjs</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="..">

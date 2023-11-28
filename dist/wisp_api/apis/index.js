@@ -1,3 +1,8 @@
+/**
+ * The Core of the API, handling low-level operations such as making requests and setting the server UUID
+ *
+ * @public
+ */
 export class WispAPICore {
     constructor(domain, uuid, token, logger) {
         this.domain = domain;
@@ -5,12 +10,41 @@ export class WispAPICore {
         this.token = token;
         this.logger = logger;
     }
+    /**
+     * Sets the Server UUID
+     *
+     * @remarks
+     * ℹ️  This can be updated at any time, making all future API calls reference the new Server UUID
+     *
+     * @public
+     */
     setUUID(uuid) {
         this.uuid = uuid;
     }
+    /**
+     * Generates a URL for the given path
+     *
+     * @param path The API path
+     *
+     * @internal
+     */
     makeURL(path) {
         return `https://${this.domain}/api/client/servers/${this.uuid}/${path}`;
     }
+    // TODO: Handle standard field-level error messages:
+    // {"errors":[{"code":"required","detail":"The path field is required","source":{"field":"path"}}]}
+    /**
+     * Makes a request with the headers and request data set automatically.
+     *
+     * @remarks
+     * The data field is formatted appropriately for whichever request type is given.
+     *
+     * @param method A standared request method.
+     * @param path The API path to send the request to.
+     * @param data The data to include with the request.
+     *
+     * @internal
+     */
     async makeRequest(method, path, data) {
         let url = this.makeURL(path);
         const headers = new Headers({
